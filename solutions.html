@@ -16,12 +16,41 @@
 	<script src="js/jquery.mobilemenu.js"></script>
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+	<script src="js/stickyNav.js"></script>
+
+	// BACK TO THE TOP PLUG-IN
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+
 	<script>
 		$(document).ready(function(){
+			//STICKY MENU
+			$('.stickyMenu').smoothMenu({
+				stickyMenu: true,
+				slidingLine: true
+			});
 			$('#responsive-menu').mobileMenu();
 
 			//TOOLTIP
 			$(document).tooltip();
+
+			//CODE FOR BACK-TO-THE-TOP
+			$("#back-to-top").hide();
+			$(function () {
+				$(window).scroll(function(){
+				if ($(window).scrollTop()>100){
+					$("#back-to-top").fadeIn(1500);
+				} else {
+					$("#back-to-top").fadeOut(1500);
+				}
+				});
+				//back to top
+				$("#back-to-top").click(function(){
+					$('body,html').animate({scrollTop:0},1000);
+					return false;
+				});
+			});
 		});
 	</script>
 </head>
@@ -47,14 +76,58 @@
 		
 		<section id="welcome" class="eleven columns">
 			<h4>Our Solutions</h4>
+				<div id="section-1" class="tracked">
+					<h5><strong>vProspect 2.0</strong></h5>
+					<p>Define and research your target audience, define your strategy to reach that audience and present a strong and memorable brand to that audience. vProspect can help your business:</p>
+					<!--<ul>-->
+						<li>Define your target audience and competition.</li>
+						<li>Research your competition and your target audience's behavior, needs, technical know-how level, etc.</li>
+						<li>Establish a conceptual and visual identity that corresponds to the defined direction of the company.</li>
+						<li>Ensure consistency across all media.</li>	
+						<li>Establish corporate guidelines for cohesiveness of any future developments.</li>
+						<li>Define and/or re-defining your service and/or product offerings.</li>
+						<li>Define expansion plans and strategies.</li>
+						<li>Implement Search Engine Optimization of all Online materials.</li>
+					<!--</ul>-->
+					<p id="back-to-top"><a href="#top"><span></span>Back To Top</a></p>
+				</div>
+				<div id="section-2" class="tracked">
+					<h5><strong>vConvert 2.0</strong></h5>
+					<p>Create a highly user-friendly and easy-to-navigate information architecture that will help your prospects interact with the company on a highly interactive level. vConvert can help your business:</p>
+					<!--<ul>-->
+						<li>Build a visual and functional user front end that focuses exclusively on providing an exceptional user experience while conveying company, service and product information.
+						</li>
+						<li>Cause the desired emotional response in a user to facilitate conversion to a client.</li>
+						<li>Build sites that move beyond merely conveying information. They advertise, motivate, excite and inspire. Users are more likely to remember and recommend your site.</li>
+						<li>Research your target audience's behavior, needs, technical know-how and level, etc.</li>	
+						<li>Develop any applicable back-end programs to facilitate user interaction with the company and offerings on a highly functional level to allow any kind of online transactions and a completely centralized information collection and access point, accessible from any location.</li>
+						<li>Create an architecture to display the site content and information in a logical and easy to access manner. Facilitating thereby the desired ease, for the user to find what they are looking for quickly and easily. Allowing the user to focus on the subject at hand rather than searching for information on the site.</li>
+					<!--</ul>-->
+					<p id="back-to-top"><a href="#top"><span></span>Back To Top</a></p>
+				</div>
+				<div id="section-3" class="tracked">
+					<h5><strong>vRetain 1.0</strong></h5>
+					<p>Build on existing customer relationships to improve productivity and maximize customer loyalty, while growing revenues. vRetain can help your business:</p>
+					<!--<ul>-->
+						<li>Streamline existing business infrastructures by utilizing technology for automation, information centralization, and information sharing among all business units and departments, as well as efficient prospect & customer tracking and interaction within the company.</li>
+						<li>Collect crucial information, data and statistics that allow a company to keep in touch with users in a very customized, highly targeted way.</li>
+						<li>Analyze site visitor behavior through traffic analysis, usability studies and interactive polling. Recommending and making site and application adjustments to improve usability and user experience.</li>
+					<!--</ul>-->
+					<p id="back-to-top"><a href="#top"><span></span>Back To Top</a></p>
+				</div>
 
 			<p>&nbsp;</p>
 		</section>
 		
 		<section id="testimonials" class="five columns">
 			<h4>Quick Nav</h4>
-
-			<!-- INSERT ACCORDION HERE -->
+			<nav class="sticky">
+				<!--<ul>-->
+				  <li><a href="#section-1">vProspect 2.0</a></li>
+				  <li><a href="#section-2">vConvert 2.0</a></li>
+				  <li><a href="#section-3">vRetain 1.0</a></li>
+				<!--</ul>-->
+			</nav>
 		</section>
 	</main>
 </body>
