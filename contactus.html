@@ -12,17 +12,37 @@
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
+	<!--jQUERY UI ELEMENTS-->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="js/jquery.mobilemenu.js"></script>
+
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 	<script>
 		$(document).ready(function(){
+			//Convert the drop down menu into a jQuery UI selectmenu. 
+			$("#companysize").selectmenu();
+
+			//Convert the submit button into a jQuery UI button.
+			$("input[type=submit], .widget a, .widget button").button();
+
+			//And Let's make the button yellow
+			$(":submit").css("background","yellow");
+
+			//Convert the checkboxes into jQuery UI checkboxes
+			$(":checkbox").checkboxradio();
+
+			//Convert the radio buttons into jQuery UI radio buttons
+			$(":radio").checkboxradio();
+
 			$('#responsive-menu').mobileMenu();
 
 			//TOOLTIP
 			$(document).tooltip();
-			
+
 		});
 	</script>
 </head>
@@ -74,15 +94,15 @@
 			    <label for="Windows"><input type="radio" name="infrastructure" value="Windows" id="Windows">Windows</label>
 
 			    <br>
-			    How many employees do you have?
-			    <select name="companysize">
+			    <label for="companysize">How many employees do you have?</label>
+			    <select name="companysize" id="companysize">
                     <option value="1-10">1-10</option>
                     <option value="11-100">11-100</option>
                     <option value="101-1000">101-1000</option>
                     <option value="More than 1000">More than 1000</option>
 		        </select>
                 
-			    How did you hear about us?
+				<label for="hearaboutus">How did you hear about us?</label>
 			    <select name="hearaboutus" multiple="" size="5">
                     <option value="Magazine Ad">Magazine Ad</option>
                     <option value="Radio Ad">Radio Ad</option>
