@@ -14,16 +14,18 @@
 
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="js/jquery.mobilemenu.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script>
 		$(document).ready(function(){
+			//ACCORDIAN
+			$("#accordion").accordion();
+
 			$('#responsive-menu').mobileMenu();
 			
 			//TOOLTIP
 			$(document).tooltip();
-
-
 		});
 	</script>
 </head>
@@ -62,7 +64,29 @@
 		<section id="testimonials" class="five columns">
 			<h4>Client Testimonials</h4>
 
-			<!-- INSERT ACCORDION HERE -->
+			<div id="accordion">
+				<h2>Iona Ford</h2>
+				<div>
+					<p>
+						"Throughout the years we have worked with Vecta Corporation, we have always been amazed at the level of dedication and professionalism that they have provided us and our WGDC products. It is this commitment that has increased both our income and exposure exponentially."
+					</p>
+					<p>
+						President<br>
+						Chevy Dealers Association
+					</p>
+				</div>
+				<h2>Robin Banks</h2>
+				<div>
+					<p>
+						"Incredible results from an incredible effort by the Vecta Corporation team! We are very pleased with the business benefits we have rceived by working with them."
+					</p>
+					<p>
+						CEO<br>
+						Profits Financial, Inc.
+					</p>
+				</div>
+
+			</div>
 		</section>
 	</main>
 </body>
