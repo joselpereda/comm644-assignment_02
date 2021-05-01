@@ -14,9 +14,14 @@
 
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="js/jquery.mobilemenu.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script>
 		$(document).ready(function(){
 			$('#responsive-menu').mobileMenu();
+
+			//TOOLTIP
+			$(document).tooltip();
 		});
 	</script>
 </head>
@@ -28,11 +33,11 @@
 		
 		<nav class="thirteen columns">
 			<ul id="responsive-menu">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="aboutus.html">About Us</a></li>
-				<li><a href="solutions.html">Solutions</a></li>
-				<li><a href="support.html">Support</a></li>
-				<li><a href="contactus.html">Contact Us</a></li>
+				<li title="Home of Innovation"><a href="index.html">Home</a></li>
+				<li title="Our credentials"><a href="aboutus.html">About Us</a></li>
+				<li title="Vecta Corp's three industry leading solutions"><a href="solutions.html">Solutions</a></li>
+				<li title="Help us help you"><a href="support.html">Support</a></li>
+				<li title="Expect a response within 24 hours"><a href="contactus.html">Contact Us</a></li>
 			</ul>
 		</nav>
 		
